@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>io.lemur</groupId>
-		<artifactId>lemur</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<artifactId>lemur-parent</artifactId>
+		<version>0.0.3-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>user-service</artifactId>
 	<packaging>jar</packaging>
-	<name>user-service</name>
+	<name>lemur-user-service</name>
 	<description>Service for managing users</description>
 
 </project>

@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -11,12 +10,16 @@
 	</parent>
 
 	<groupId>io.lemur</groupId>
-	<artifactId>lemur</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>lemur-parent</artifactId>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>lemur-parent</name>
 	<description>Parent project for dependency management</description>
+
+	<scm>
+		<developerConnection>scm:git:https://github.com/tiernanscully/micro-spring.git</developerConnection>
+	</scm>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,7 +38,7 @@
 			</dependency>
 			<dependency>
 				<groupId>io.lemur</groupId>
-				<artifactId>web-service</artifactId>
+				<artifactId>user-service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -45,17 +48,17 @@
 			</dependency>
 			<dependency>
 				<groupId>io.lemur</groupId>
-				<artifactId>user-service</artifactId>
+				<artifactId>web-service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
-        <dependency>
-            <!-- Spring Cloud starter -->
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter</artifactId>
-        </dependency>
+		<dependency>
+			<!-- Spring Cloud starter -->
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter</artifactId>
+		</dependency>
 		<dependency>
 			<!-- Eureka for service registration -->
 			<groupId>org.springframework.cloud</groupId>
@@ -67,6 +70,24 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<classifier>exec</classifier>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -74,6 +95,6 @@
 	<modules>
 		<module>eureka-service</module>
 		<module>user-service</module>
-<!-- 		<module>web-service</module> -->
+		<module>web-service</module>
 	</modules>
 </project>
