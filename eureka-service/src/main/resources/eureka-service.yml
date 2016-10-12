@@ -1,0 +1,14 @@
+# Discovery Server Access
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enableSelfPreservation: false
+    
+  client:  # Not a client, don't register with yourself
+    registerWithEureka: false
+    fetchRegistry: false
+    
+# HTTP Server
+server:
+  port: 8761
