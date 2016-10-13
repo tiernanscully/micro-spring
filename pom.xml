@@ -10,7 +10,7 @@
 
 	<groupId>io.lemur</groupId>
 	<artifactId>lemur-parent</artifactId>
-	<version>0.0.4</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>lemur-parent</name>
@@ -20,7 +20,7 @@
 		<connection>scm:git:git@github.com:tiernanscully/micro-spring.git</connection>
 		<url>scm:git:git@github.com:tiernanscully/micro-spring.git</url>
 		<developerConnection>scm:git:git@github.com:tiernanscully/micro-spring.git</developerConnection>
-	  <tag>v0.0.4</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<properties>
