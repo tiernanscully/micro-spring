@@ -18,7 +18,9 @@
 	<description>Parent project for dependency management</description>
 
 	<scm>
-		<developerConnection>scm:git:https://github.com/tiernanscully/micro-spring.git</developerConnection>
+		<connection>scm:git:git@github.com:tiernanscully/micro-spring.git</connection>
+		<url>scm:git:git@github.com:tiernanscully/micro-spring.git</url>
+		<developerConnection>scm:git:git@github.com:tiernanscully/micro-spring.git</developerConnection>
 	</scm>
 
 	<properties>
