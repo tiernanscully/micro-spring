@@ -12,4 +12,8 @@
 	<name>lemur-user-service</name>
 	<description>Service for managing users</description>
 
+
+  <scm>
+    <tag>v0.0.3</tag>
+  </scm>
 </project>
