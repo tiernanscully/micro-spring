@@ -1,4 +1,4 @@
-package com.lemur.user;
+package com.lemur.user.service;
 
 import java.io.Serializable;
 
@@ -16,7 +16,8 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long userId;
+    private final String username;
     private final String firstName;
     private final String lastName;
     private final String phoneNumber;

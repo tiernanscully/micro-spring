@@ -1,9 +1,15 @@
-package com.lemur.user;
+package com.lemur.user.service;
+
+import java.util.List;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends PagingAndSortingRepository<User, Long> {
 
+	List<User> findAll();
+	
+	User findUserByUserId(@Param("userId") final Long userId);
 }

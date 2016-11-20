@@ -1,4 +1,4 @@
-package com.lemur.user;
+package com.lemur.user.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -25,9 +25,9 @@ public class Main {
     @Bean
     CommandLineRunner setUp() {
         return (args) -> {
-            repo.save(new User("Tiernan", "Scully", "phoneNumber", "emailAddress"));
-            repo.save(new User("Patrick", "Scully", "phoneNumber", "emailAddress"));
-            repo.save(new User("Bridie", "Scully", "phoneNumber", "emailAddress"));
+            repo.save(new User("etiescu","Tiernan", "Scully", "phoneNumber", "emailAddress"));
+            repo.save(new User("pj","Patrick", "Scully", "phoneNumber", "emailAddress"));
+            repo.save(new User("bríd","Bridie", "Scully", "phoneNumber", "emailAddress"));
             System.out.println(repo.findAll());
         };
     }

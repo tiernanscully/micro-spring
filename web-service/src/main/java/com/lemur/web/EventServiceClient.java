@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.lemur.user.service.User;
+import com.lemur.event.service.Event;
 
-@FeignClient("user-service")
+@FeignClient("event-service")
 @RequestMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-public interface UserServiceClient {
+public interface EventServiceClient{
 
-    @RequestMapping(method = RequestMethod.GET, value = "/users")
-    PagedResources<Resource<User>> getUsers();
+    @RequestMapping(method = RequestMethod.GET, value = "/events")
+    PagedResources<Resource<Event>> getEvents();
     
-    @RequestMapping(method = RequestMethod.GET, value = "/users/{userId}")
-    Resource<User> getUserById(@PathVariable("userId")final String userId);
+    @RequestMapping(method = RequestMethod.GET, value = "/events/{eventId}")
+    Resource<Event> getEventById(@PathVariable("eventId")final String eventId);
     
-    @RequestMapping(method = RequestMethod.GET, value = "/users/search")
+    @RequestMapping(method = RequestMethod.GET, value = "/events/search")
 	Resource<String> searchApi();
 }

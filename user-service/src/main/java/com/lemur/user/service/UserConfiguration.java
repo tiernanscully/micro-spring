@@ -1,4 +1,4 @@
-package com.lemur.user;
+package com.lemur.user.service;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
