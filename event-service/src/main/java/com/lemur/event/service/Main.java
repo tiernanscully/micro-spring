@@ -1,6 +1,5 @@
 package com.lemur.event.service;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,13 +19,13 @@ import com.lemur.user.service.User;
 @SpringBootApplication(exclude = EndpointMBeanExportAutoConfiguration.class)
 public class Main {
 
+	@Autowired
+	private EventRepository repo;
+
 	public static void main(final String[] args) {
 		System.setProperty("spring.config.name", "event-service");
 		SpringApplication.run(Main.class, args);
 	}
-
-	@Autowired
-	private EventRepository repo;
 
 	@Bean
 	CommandLineRunner setUp() {
