@@ -1,0 +1,14 @@
+# Spring properties
+spring:
+  application:
+     name: event-service
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+
+# HTTP Server
+server:
+  port: 8400
