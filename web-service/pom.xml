@@ -37,9 +37,9 @@
 			<groupId>io.lemur</groupId>
 			<artifactId>user-service</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>io.lemur</groupId>
-			<artifactId>event-service</artifactId>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>io.lemur</groupId> -->
+<!-- 			<artifactId>event-service</artifactId> -->
+<!-- 		</dependency> -->
 	</dependencies>
 </project>

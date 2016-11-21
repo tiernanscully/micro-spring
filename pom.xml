@@ -104,7 +104,7 @@
 	<modules>
 		<module>eureka-service</module>
 		<module>user-service</module>
-		<module>event-service</module>
+<!-- 		<module>event-service</module> -->
 		<module>web-service</module>
 	</modules>
 </project>
